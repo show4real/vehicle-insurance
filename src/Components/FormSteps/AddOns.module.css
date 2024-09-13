@@ -1,0 +1,12 @@
+.flexParent {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: flex-end;
+}

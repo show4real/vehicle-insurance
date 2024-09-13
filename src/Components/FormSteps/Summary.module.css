@@ -1,0 +1,117 @@
+.summaryWrapper {
+  background: var(--alabaster);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.planPriceWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 1rem;
+}
+
+.planPriceWrapper h2,
+.summaryWrapper span {
+  font-weight: 500;
+  color: var(--marine-blue);
+}
+
+.planPriceWrapper .planPrice {
+  font-weight: 700;
+}
+
+.planPriceWrapper button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--cool-gray);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.planPriceWrapper button:hover {
+  color: var(--purplish-blue);
+}
+
+.addOnsWrapper {
+  margin-top: 1rem;
+}
+
+.addOnsItemWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addOnsItemWrapper p {
+  color: var(--cool-gray);
+}
+
+.addOnsItemWrapper {
+  margin-top: 1rem;
+}
+
+.finalPriceWrapper {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finalPriceWrapper p {
+  color: var(--cool-gray);
+}
+
+.finalPriceWrapper span {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--purplish-blue);
+}
+
+.flexParent {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: flex-end;
+}
+
+
+.summaryItem {
+  margin-bottom: 5px;
+  padding: 5px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.summaryItem:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-size: 15px;
+  color: #555;
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 10px;
+}
+
+

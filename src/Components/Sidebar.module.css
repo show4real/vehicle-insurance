@@ -1,0 +1,18 @@
+.section {
+  background: url("../Assets/bg-sidebar-desktop.svg") no-repeat center center;
+  padding: 3rem 3.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section.mobile {
+  background-image: url("../Assets/bg-sidebar-mobile.svg");
+  background-size: cover;
+  background-position: top;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  height: 13.75rem;
+  min-width: 100vw;
+}

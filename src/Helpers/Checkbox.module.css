@@ -1,0 +1,60 @@
+.checkboxWrapper {
+  display: flex;
+  border: 1px solid var(--light-gray);
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.checkboxWrapper.active {
+  background: var(--magnolia);
+  border-color: var(--purplish-blue);
+}
+
+.checkboxWrapper span {
+  margin-left: auto;
+}
+
+label + label {
+  margin-top: 1rem;
+}
+
+.checkboxWrapper h2 {
+  font-weight: 500;
+  color: var(--marine-blue);
+  margin-bottom: 0.5rem;
+}
+
+.checkboxWrapper p {
+  color: var(--cool-gray);
+}
+
+.checkboxWrapper span {
+  color: var(--purplish-blue);
+}
+
+.checkboxWrapper:hover,
+.checkboxWrapper:focus {
+  border-color: var(--purplish-blue);
+  background: var(--magnolia);
+}
+
+.checkboxWrapper input {
+  width: 2rem;
+}
+
+@media (max-width: 940px) {
+  .checkboxWrapper {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .checkboxWrapper input {
+    width: 1rem;
+  }
+
+  .checkboxWrapper p {
+    font-size: 0.675rem;
+  }
+}
