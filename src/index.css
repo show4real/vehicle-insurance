@@ -161,7 +161,6 @@ body {
   font-family: "Ubuntu", sans-serif;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   min-height: 100vh;
   max-width: 100%;
@@ -180,9 +179,18 @@ main {
 }
 
 @media (max-width: 940px) {
-  body {
-    justify-content: flex-start;
-  }
+ 
+
+    body {
+      /* Remove or override styles for mobile */
+      display: block;
+      min-height: auto;
+      max-width: 100%;
+      background-color: var(--white);
+      /* or any other background */
+      align-items: flex-start;
+      /* If needed */
+    }
   main {
     grid-template-columns: 1fr;
     width: auto;

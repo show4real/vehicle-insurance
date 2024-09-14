@@ -87,7 +87,6 @@ const ListXYZT = () => {
       title: "Name",
       dataIndex: "name",
       key: "name",
-      responsive: ["lg"],
     },
     {
       title: "Email",
@@ -98,19 +97,16 @@ const ListXYZT = () => {
       title: "Phone",
       dataIndex: "phone",
       key: "phone",
-      responsive: ["lg"],
     },
     {
       title: "Covered Insurance",
       dataIndex: "coveredInsurance",
       key: "coveredInsurance",
-      responsive: ["md"],
     },
     {
       title: "Moving Violations",
       dataIndex: "movingViolations",
       key: "movingViolations",
-      responsive: ["md"],
     },
     {
       title: "VIN",
@@ -121,7 +117,6 @@ const ListXYZT = () => {
       title: "Vehicle Year",
       dataIndex: "vehicle_year",
       key: "vehicle_year",
-      responsive: ["md"],
     },
     {
       title: "Vehicle Make",
@@ -137,7 +132,6 @@ const ListXYZT = () => {
       title: "Vehicle Submodel",
       dataIndex: "vehicle_submodel",
       key: "vehicle_submodel",
-      responsive: ["lg"],
     },
     {
       title: "Action",
@@ -156,34 +150,40 @@ const ListXYZT = () => {
   ];
 
   return (
-    <div className={styles.formWrapper} style={{ marginBottom: 10 }}>
+    <div
+      style={{
+        margin: 100,
+      }}
+    >
       {/* Search Box */}
-      <Row justify="end" style={{ marginBottom: 16 }}>
-        <Col>
-          <Input.Search
-            placeholder="Search forms"
-            value={searchText}
-            onChange={handleSearchChange}
-            onSearch={handleSearch} // Trigger search on Enter or button click
-            allowClear
-            style={{ width: 200 }}
-          />
-        </Col>
-      </Row>
 
-      <Table
-        columns={columns}
-        dataSource={data}
-        rowKey="id"
-        pagination={{
-          current: currentPage,
-          pageSize: pageSize,
-          total: totalItems,
-        }}
-        loading={loading}
-        onChange={handleTableChange}
-        scroll={{ x: 800 }} // Enables horizontal scroll on small screens
-      />
+      <div>
+        <Row justify="end" style={{ marginBottom: 16 }}>
+          <Col>
+            <Input.Search
+              placeholder="Search forms"
+              value={searchText}
+              onChange={handleSearchChange}
+              onSearch={handleSearch} // Trigger search on Enter or button click
+              allowClear
+              style={{ width: 200 }}
+            />
+          </Col>
+        </Row>
+        <Table
+          columns={columns}
+          dataSource={data}
+          rowKey="id"
+          pagination={{
+            current: currentPage,
+            pageSize: pageSize,
+            total: totalItems,
+          }}
+          loading={loading}
+          onChange={handleTableChange}
+          scroll={{ x: 500 }} // Enables horizontal scroll on small screens
+        />
+      </div>
     </div>
   );
 };
