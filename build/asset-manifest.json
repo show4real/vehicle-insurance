@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.689886dc.css",
+    "main.js": "/static/js/main.38e5b9ec.js",
+    "static/media/insurance.jpg": "/static/media/insurance.35847af6cb2d3565b06e.jpg",
+    "static/media/bg-sidebar-desktop.svg": "/static/media/bg-sidebar-desktop.6918153f38678372ceb1.svg",
+    "static/media/bg-sidebar-mobile.svg": "/static/media/bg-sidebar-mobile.ad41661b40ca0b967f3a.svg",
+    "static/media/icon-thank-you.svg": "/static/media/icon-thank-you.ee753f231cc5a5789b8eb922a96472c0.svg",
+    "index.html": "/index.html",
+    "main.689886dc.css.map": "/static/css/main.689886dc.css.map",
+    "main.38e5b9ec.js.map": "/static/js/main.38e5b9ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.689886dc.css",
+    "static/js/main.38e5b9ec.js"
+  ]
+}
