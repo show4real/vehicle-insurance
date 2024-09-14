@@ -15,13 +15,16 @@ const Summary = () => {
     setSubmissionError(null); // Reset error state before submission
 
     try {
-      const response = await fetch("http://127.0.0.1:8083/api/form/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData), // Send formData as JSON to the API
-      });
+      const response = await fetch(
+        "https://testapi.giantworkz.com/api/form/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData), // Send formData as JSON to the API
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Submission failed: ${response.statusText}`);

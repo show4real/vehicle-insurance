@@ -7,8 +7,7 @@ import insurance from "./Assets/insurance.jpg";
 
 const App = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
-  const location = useLocation(); // Get the current route
-
+  const location = useLocation();
   const handleNavToggle = () => {
     setIsNavVisible(!isNavVisible);
   };
