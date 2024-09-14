@@ -16,19 +16,27 @@ const PersonalInfo = () => {
   const [movingViolations, setMovingViolations] = useState(
     formData.movingViolations || "No"
   );
+  const [coveredInsurance, setCoveredInsurance] = useState(
+    formData.coveredInsurance || false
+  );
 
   function handleChange(event) {
     const { name, value } = event.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   }
 
+  function handleCheckboxChange() {
+    setCoveredInsurance((prev) => !prev);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     if (validate()) {
-      // Save marital status and violations to form data before submitting
+      // Save moving violations and insurance coverage to form data before submitting
       setFormData((prevData) => ({
         ...prevData,
         movingViolations,
+        coveredInsurance: coveredInsurance ? "Yes" : "No",
       }));
       setStep(step + 1);
     }
@@ -37,13 +45,31 @@ const PersonalInfo = () => {
   return (
     <>
       <FormHeader
-        title="Personal Info"
-        info="Please provide your name, email address, and phone number."
+        title="Personal Information"
+        info="Please provide personal details below"
       />
       <form
         className={mobile ? `${styles.form} ${styles.mobile}` : styles.form}
         onSubmit={handleSubmit}
       >
+        <div className={styles.formWrapper} style={{ marginBottom: 10 }}>
+          <label className={styles.switchLabel} htmlFor="insurance">
+            Are you currently covered by an auto insurance policy?
+          </label>
+          <div className={styles.switchContainer}>
+            <span>No&nbsp;&nbsp;</span>
+            <label className={styles.switch}>
+              <input
+                type="checkbox"
+                id="insurance"
+                checked={coveredInsurance}
+                onChange={handleCheckboxChange}
+              />
+              <span className={styles.slider}></span>
+            </label>
+            <span>&nbsp;&nbsp;Yes</span>
+          </div>
+        </div>
         <Input
           type="text"
           id="name"

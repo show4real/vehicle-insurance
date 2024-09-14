@@ -17,7 +17,9 @@ const SidebarItem = ({ index, stepInfo }) => {
       className={
         mobile ? `${styles.itemWrapper} ${styles.mobile}` : styles.itemWrapper
       }
-      style={{ marginTop: 15 }}
+      style={{
+        marginTop: step === 1 ? "20px" : "0px",
+      }}
     >
       <span
         className={isActive ? `${styles.index} ${styles.active}` : styles.index}

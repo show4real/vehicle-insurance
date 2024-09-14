@@ -7,12 +7,13 @@ const ThankYouPage = () => {
     <>
       <div className={styles.thankYouWrapper}>
         <ThankYou />
-        <h1>Thank you!</h1>
-        <p>
-          Thanks for confirming your subscription! We hope you have fun using
-          our platform. If you ever need support, please feel free to email us
-          at support@loremgaming.com.
-        </p>
+        <div>
+          <h1>Thanks for Requesting for Quote</h1>
+          <p>Your Quote will be sent to you via Email</p>
+          <p>
+            <a href="/">click here to continue</a>
+          </p>
+        </div>
       </div>
     </>
   );

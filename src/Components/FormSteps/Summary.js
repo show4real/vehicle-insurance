@@ -15,7 +15,7 @@ const Summary = () => {
     setSubmissionError(null); // Reset error state before submission
 
     try {
-      const response = await fetch("https://your-api-endpoint.com/submit", {
+      const response = await fetch("http://127.0.0.1:8083/api/form/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -46,6 +46,7 @@ const Summary = () => {
         title="Finishing up"
         info="Double check everything looks OK before confirming."
       />
+      {console.log(formData)}
       <div className={styles.summaryWrapper} style={{ marginTop: 0 }}>
         {/* Displaying Personal Info */}
         <div className={styles.summaryItem}>
@@ -61,9 +62,18 @@ const Summary = () => {
           <p className={styles.value}>{formData.phone || "N/A"}</p>
         </div>
 
-        <div className={styles.summaryItem}>
-          <h3 className={styles.label}>Moving Violations (last 5 years)</h3>
-          <p className={styles.value}>{formData.movingViolations || "N/A"}</p>
+        <div
+          className={styles.summaryItem}
+          style={{ display: "flex", justifyContent: "space-between" }}
+        >
+          <div>
+            <h3 className={styles.label}>Covered By Auto Insurance</h3>
+            <p className={styles.value}>{formData.coveredInsurance || "N/A"}</p>
+          </div>
+          <div>
+            <h3 className={styles.label}>Moving Violations (last 5 years)</h3>
+            <p className={styles.value}>{formData.movingViolations || "N/A"}</p>
+          </div>
         </div>
 
         {/* Displaying Make/Model/Year or VIN */}
